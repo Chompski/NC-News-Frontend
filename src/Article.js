@@ -86,11 +86,11 @@ class ArticlePage extends Component {
                         </div>
                         <div>
                             {comments.map(comment => {
-                                console.log(comment._id)
                                 return (
                                     <div className="CommentLayout">
                                         <div className="line-separator"></div>
                                         <img src={comment.created_by.avatar_url} className="UserImage" align="left" width="7%" />
+                                       <p>{comment.body}</p>
                                         <p>{comment.votes}</p>
                                         <div className="inline-body">
                                         {/* <Rating id={comment._id} votes={comment.votes} changeVote={this.changeCommentVote}/> */}
