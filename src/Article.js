@@ -34,10 +34,10 @@ class ArticlePage extends Component {
         this.setState(prevState => ({article: {...prevState.article, votes: prevState.article.votes + vote}}))
       }
 
-      changeCommentVote = (direction) => {
-        const vote = direction === 'up' ? 1 : direction === 'down' ? -1 : 0
-      this.setState(prevState => ({comment: {...prevState.comment, votes: prevState.comment.votes + vote}}))
-    }
+    //   changeCommentVote = (direction) => {
+    //     const vote = direction === 'up' ? 1 : direction === 'down' ? -1 : 0
+    //   this.setState(prevState => ({comment: {...prevState.comment, votes: prevState.comment.votes + vote}}))
+    // }
 
       sortComment = (comments) => {
       return comments.sort(function(x, y){
@@ -81,7 +81,7 @@ class ArticlePage extends Component {
                         <p>{article.body}</p>
                         </div>
                         <div className="inline-body" align="center">
-                            <Rating id={article._id} votes={article.votes} changeVote={this.changeCommentVote}/>
+                            <Rating id={article._id} votes={article.votes} changeVote={this.changeVote}/>
                             <p><b>{article.created_by.username}</b></p>
                         </div>
                         <div>
@@ -93,7 +93,7 @@ class ArticlePage extends Component {
                                         <img src={comment.created_by.avatar_url} className="UserImage" align="left" width="7%" />
                                         <p>{comment.votes}</p>
                                         <div className="inline-body">
-                                        <Rating id={comment._id} votes={comment.votes} changeVote={this.changeVote}/>
+                                        {/* <Rating id={comment._id} votes={comment.votes} changeVote={this.changeCommentVote}/> */}
                                             <p>{comment.created_by.username}</p>
                                             <p>Posted: {moment(comment.created_at).fromNow()}</p>
                                         </div>
@@ -106,7 +106,7 @@ class ArticlePage extends Component {
                 </React.Fragment>
                 :
                 <div>
-                    <img src={Loading} align="center" className="App-Loading" />
+                    <img src={Loading} align="center" className="App-Loading" width="60%"/>
                 </div>
         )
 

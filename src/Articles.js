@@ -74,7 +74,7 @@ class ArticlesPage extends Component {
                 </React.Fragment>
                 :
                 <div>
-                    <img src={Loading} align="center" className="App-Loading" />
+                    <img src={Loading} align="center" className="App-Loading" width="60%" />
                 </div>
         )
     }
