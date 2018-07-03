@@ -23,16 +23,22 @@ class ArticlesPage extends Component {
         this.setState(prevState => ({ articles: [article, ...prevState.articles] }))
     }
 
+    sortArticles = (articles) => {
+        return articles.sort(function (x, y) {
+            return y.votes - x.votes;
+        })
+    }
+
     componentDidMount() {
         if (this.props.match.params.topicID) {
             fetchArticles(this.props.match.url).then(articles => {
-                this.setState({ articles, loading: false })
+                this.setState({ articles:this.sortArticles(articles), loading: false })
             })
         }
 
         else {
             fetchArticles("/articles").then(articles => {
-                this.setState({ articles, loading: false })
+                this.setState({ articles:this.sortArticles(articles), loading: false })
             })
         }
     }
@@ -40,7 +46,7 @@ class ArticlesPage extends Component {
     componentDidUpdate(prevProps) {
         if (prevProps.match.url !== this.props.match.url) {
             fetchArticles(this.props.match.url).then(articles => {
-                this.setState({ articles, loading: false })
+                this.setState({ articles:this.sortArticles(articles), loading: false })
             })
         }
     }

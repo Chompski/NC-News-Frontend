@@ -22,9 +22,15 @@ export const fetchArticleComments = async (articleID) => {
     return body 
 }
 
-export const changeRating = async (articleID, direction) => {
+export const changeRatingArticle = async (direction, articleID) => {
     const res = await fetch(`https://mathew-nc-news.herokuapp.com/api/articles/${articleID}?vote=${direction}`, {method:'PUT'}).catch(console.log)
     const body = await res.json().catch(console.log)
+    return body
+}
+
+export const changeRatingComment = async (direction, commentID) => {
+    const res = await fetch(`https://mathew-nc-news.herokuapp.com/api/comments/${commentID}?vote=${direction}`, {method:'PUT'})
+    const body = await res.json()
     return body
 }
 
