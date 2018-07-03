@@ -2,7 +2,7 @@ import React from 'react'
 import x from './x.png'
 
 const NewComment = (props) => {
-    
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -19,8 +19,8 @@ const NewComment = (props) => {
 
     if (props.buttonClicked) {
         return (
-            <div className="sideform" >
-            <img src={x} align="center" height="25px" onClick={props.toggleButton} role="button"/>
+            <div className="sideform sideform-style" >
+                <img src={x} align="center" height="25px" onClick={props.toggleButton} role="button" alt="close"/>
                 <form method="POST" id="comment" onSubmit={handleSubmit}>
                     <div className='App-Form'>
                         <textarea rows="10" id="bodyInput" className="sideform-style" placeholder='Comment here...'></textarea>
@@ -32,7 +32,11 @@ const NewComment = (props) => {
     }
 
     else {
-        return <a className="button commentpost" href="http://localhost:3000/" role="button" onClick={props.toggleButton}></a>
+        return (
+        <span className="App-Post">
+            <a className="button commentpost" role="button" onClick={props.toggleButton}></a>
+        </span>
+        )
     }
 }
 

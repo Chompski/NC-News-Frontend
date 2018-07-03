@@ -4,7 +4,6 @@ import up from './up.png'
 import down from './down.png'
 import './Article.css';
 
-
 const Rating = ({votes, id, changeVote, isComment}) => {
 
     const handleClick = (event) => {
@@ -20,12 +19,11 @@ const Rating = ({votes, id, changeVote, isComment}) => {
 
     return (
         <div className="inline-body">
-            <input type="image" src={up} height="40px" onClick={handleClick} value="up" role="button" className="vote"/>
+            <input type="image" src={up} height="40px" onClick={handleClick} value="up" role="button" className="vote" alt="thumb"/>
             <p><b>{votes}</b></p>
-            <input type="image" src={down} height="40px" onClick={handleClick} value="down" role="button" className="vote"/>
+            <input type="image" src={down} height="40px" onClick={handleClick} value="down" role="button" className="vote" alt="thumb"/>
         </div>
     )
 }
-
 
 export default Rating

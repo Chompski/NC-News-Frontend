@@ -17,7 +17,6 @@ class ArticlePage extends Component {
         buttonClicked: false
     }
 
-
     toggleButton = (event) => {
         event.preventDefault();
         this.setState({
@@ -55,9 +54,9 @@ class ArticlePage extends Component {
 
             fetchArticleComments(ID).then(comments => {
                 this.setState({ comments: this.sortComment(comments), loading: false })
-
             })
-
+        }).catch(() => {
+            this.props.history.push('/404')
         })
     }
 
@@ -66,6 +65,8 @@ class ArticlePage extends Component {
         if (prevProps.match.url !== this.props.match.url) {
             fetchArticleComments(ID).then(comments => {
                 this.setState({ comments: this.sortComment(comments), loading: false })
+            }).catch(() => {
+                this.props.history.push('/404')
             })
         }
     }
@@ -77,7 +78,7 @@ class ArticlePage extends Component {
                 <React.Fragment >
                     <NewComment buttonClicked={this.state.buttonClicked} toggleButton={this.toggleButton} addComment={this.addComment} {...this.props} />
                     <div className="ArticleLayout" align="center">
-                        <img src={article.created_by.avatar_url} className="UserImage" align="left" width="8%" />
+                        <img src={article.created_by.avatar_url} className="UserImage" align="left" width="8%" alt="UserImage"/>
                         <div className="inline-title" align="center">
                             <h2>{article.title}</h2>
                         </div>
@@ -93,23 +94,24 @@ class ArticlePage extends Component {
                                 return (
                                     <div className="CommentLayout" key={comment._id}>
                                         <div className="line-separator"></div>
-                                        <img src={comment.created_by.avatar_url} className="UserImage" align="left" width="7%" />
+                                        <img src={comment.created_by.avatar_url} className="UserImage" align="left" width="9%" alt="UserImage"/>
                                         <p className="comment-body">{comment.body}</p>
                                         <div className="inline-body">
                                             <Rating id={comment._id} votes={comment.votes} changeVote={this.changeCommentVote} isComment />
                                             <p><b>{comment.created_by.username}</b></p>
-                                            <p><b>Posted: {moment(comment.created_at).fromNow()}</b></p>
                                         </div>
+                                        <div>
+                                            <p><b>Posted: {moment(comment.created_at).fromNow()}</b></p>
+                                            </div>
                                     </div>
                                 )
                             })}
                         </div>
-
                     </div>
                 </React.Fragment>
                 :
                 <div>
-                    <img src={Loading} align="center" className="App-Loading" width="60%" />
+                    <img src={Loading} align="center" className="App-Loading" width="60%" alt="loading"/>
                 </div>
         )
 

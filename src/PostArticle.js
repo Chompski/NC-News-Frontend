@@ -19,8 +19,8 @@ const NewArticle = (props) => {
 
     if (props.buttonClicked) {
         return (
-            <div className="sideform">
-                <img src={x} align="center" height="25px" onClick={props.toggleButton} role="button" />
+            <div className="sideform sideform-style">
+                <img src={x} align="center" height="25px" onClick={props.toggleButton} role="button" alt="close" />
                 <form method="POST" id="article" onSubmit={handleSubmit}>
                     <div className='App-Form'>
                         <input type="text" size="15" placeholder="Title here..." className="sideform-style" />
@@ -33,7 +33,11 @@ const NewArticle = (props) => {
     }
 
     else {
-        return <a className="button articlepost" href="http://localhost:3000/" role="button" onClick={props.toggleButton}></a>
+        return (
+            <span className="App-Post">
+                <a className="button articlepost" role="button" onClick={props.toggleButton}></a>
+            </span>
+        )
     }
 }
 
