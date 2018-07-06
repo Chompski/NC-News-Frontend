@@ -26,7 +26,7 @@ class App extends Component {
           </div>
 
           <span className="App-Nav">
-            <a className="button home" href="http://localhost:3000/" role="button"></a>
+            <a className="button home" href="/" role="button"></a>
             <Topics />
           </span>
        
