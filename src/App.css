@@ -169,16 +169,27 @@ border-style: dotted;
     border-radius: 30px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
+  }
+  .commentpost {
+    background: url(comment.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    position: fixed;
+    padding: 3% 3%;
+    left: 2%; top:400px;
+    min-width: 40px;
+    min-height: 20px;
+    margin: 1%;
+    border-style: solid;
+    border-width: 1%;
+    border-color: #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
   }
 }
-
-
-
-
 
 @media screen and (max-width: 1200px){
   .articlepost{
@@ -199,10 +210,6 @@ border-style: dotted;
     border-radius: 30px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
   }
 
   .commentpost {
@@ -211,7 +218,7 @@ border-style: dotted;
     background-size: 90%;
     background-position: center;
     position: fixed;
-    padding: 1% 1%;
+    padding: 3% 3%;
     left: 0%; top:20%;
     min-width: 40px;
     min-height: 20px;
@@ -220,14 +227,9 @@ border-style: dotted;
     border-width: 1%;
     border-color: #000000;
     background-color: rgb(255, 255, 255);
-    padding: 5% 5%;
     border-radius: 30px;
     color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
   }
 
   .App-Nav {
@@ -275,29 +277,16 @@ border-style: dotted;
 
 @media screen and (max-width: 1024px){
  
-  p {font-size: 10%;
-    margin: 1%;
-      }
-  h1 {font-size: 10%;
-      }
-  h2 {font-size: 10%;
-      }
-  h3 {font-size: 10%;
-    margin: 1%;
-      }
-    b {
-      font-size: 70%;
-      margin: 1%;
-      }
-
       .commentpost {
         background: url(comment.png);
         background-repeat: no-repeat;
         background-size: 90%;
-        background-position: center;
+        background: url(Article.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
         background-position: center;
         position: fixed;
-        padding: 1% 1%;
+        padding: 3% 3%;
         left: 0%; top:15%;
         width:2%;
         min-width: 40px;
@@ -307,14 +296,10 @@ border-style: dotted;
         border-width: 1%;
         border-color: #000000;
         background-color: rgb(255, 255, 255);
-        padding: 5% 5%;
         border-radius: 30px;
         color: rgb(0, 0, 0);
         text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 100%;
+       
       }
       
       .articlepost{
@@ -323,7 +308,7 @@ border-style: dotted;
         background-size: 95%;
         background-position: center;
         position: fixed;
-        padding: 1% 1%;
+        padding: 3% 3%;
         left: 0%; top:15%;
         width:2%;
         min-width: 40px;
@@ -333,14 +318,9 @@ border-style: dotted;
         border-width: 1%;
         border-color: #000000;
         background-color: rgb(255, 255, 255);
-        padding: 5% 5%;
         border-radius: 30px;
         color: rgb(0, 0, 0);
         text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 100%;
       }
 
       .App-Nav {
@@ -388,31 +368,20 @@ border-style: dotted;
 
 @media screen and (max-width: 600px){
 
-  p {font-size: 10%;
-    margin: 1%;
-      }
-  h1 {font-size: 10%;
-      }
-  h2 {font-size: 10%;
-      }
-  h3 {font-size: 10%;
-    margin: 1%;
-      }
-    b {
-      font-size: 70%;
-      margin: 1%;
-      }
 
       .commentpost {
         background: url(comment.png);
         background-repeat: no-repeat;
         background-size: 90%;
+        background: url(Article.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
         background-position: center;
         position: fixed;
         padding: 3% 3%;
-        left: 0%; top: 8%;
+        left: 2%; top: 8%;
         width:2%;
-        min-width: 25px;
+        min-width: 28px;
         min-height: 15px;
         margin: 1%;
         border-style: solid;
@@ -422,10 +391,6 @@ border-style: dotted;
         border-radius: 30px;
         color: rgb(0, 0, 0);
         text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 100%;
       }
       
       .articlepost{
@@ -447,10 +412,6 @@ border-style: dotted;
         border-radius: 30px;
         color: rgb(0, 0, 0);
         text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 100%;
       }
 
       .App-Nav {
