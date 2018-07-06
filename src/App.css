@@ -152,7 +152,7 @@ border-style: dotted;
 
 
 
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1200px){
   .articlepost{
     background: url(Article.png);
     background-repeat: no-repeat;
