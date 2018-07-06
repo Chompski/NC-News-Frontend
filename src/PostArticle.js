@@ -35,7 +35,7 @@ const NewArticle = (props) => {
     else {
         return (
             <span className="App-Post">
-                <a className="button articlepost" role="button" onClick={props.toggleButton}></a>
+                <a className="articlepost" role="button" onClick={props.toggleButton}></a>
             </span>
         )
     }
