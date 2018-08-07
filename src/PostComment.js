@@ -13,7 +13,7 @@ const NewComment = (props) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-        }).then(res => res.json()).then(comment => props.addComment(comment)).catch(console.log)
+        }).then(res => res.json()).then(comment => props.addComment(comment)).catch(this.props.history.push('/404'))
     }
 
 

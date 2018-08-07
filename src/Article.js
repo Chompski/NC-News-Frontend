@@ -4,7 +4,6 @@ import './Article.css';
 import Loading from './NCLoading.png'
 import NewComment from "./PostComment"
 import Rating from "./Rating"
-
 import moment from "moment"
 
 

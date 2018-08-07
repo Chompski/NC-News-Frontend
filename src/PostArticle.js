@@ -13,9 +13,8 @@ const NewArticle = (props) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-        }).then(res => res.json()).then(article => props.addArticle(article)).catch(console.log)
+        }).then(res => res.json()).then(article => props.addArticle(article)).catch(this.props.history.push('/404'))
     }
-
 
     if (props.buttonClicked) {
         return (
