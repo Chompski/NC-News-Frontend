@@ -15,6 +15,14 @@ class App extends Component {
       <BrowserRouter>
        
         <div className="App">
+
+          <span className="App-Nav">
+            <a className="button home" href="/" role="button"></a>
+            <Topics />
+          </span>
+         
+
+        
         
           <div align="center" className="App-Body">
           <Switch>
@@ -25,10 +33,7 @@ class App extends Component {
           </Switch>
           </div>
 
-          <span className="App-Nav">
-            <a className="button home" href="/" role="button"></a>
-            <Topics />
-          </span>
+        
        
         </div>
        
